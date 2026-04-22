@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carreras — UPG Universidad Privada del Guairá</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            upg: {
+              green: '#1B6B2B', 'green-dark': '#124A1E', 'green-light': '#2C8C3C',
+              orange: '#D94F0A', 'orange-light': '#F06820', cream: '#FBF8F1',
+            }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+
+  <!-- Top bar -->
+  <div class="bg-upg-green-dark text-white text-xs py-2 hidden md:block">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-6 text-gray-300">
+        <span>info@upg.edu.py</span>
+        <span>(0541) 000-000</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="text-gray-300 hover:text-upg-orange-light transition-colors">Inicio</a>
+        <a href="contacto.html" class="text-gray-300 hover:text-upg-orange-light transition-colors">Contacto</a>
+        <a href="#" class="bg-upg-orange text-white px-3 py-1 rounded text-xs font-semibold">Iniciar Sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between py-3">
+        <a href="../index.html" class="flex items-center gap-2">
+          <img src="../assets/img/logo.png" alt="Universidad Privada del Guairá" class="h-14 w-auto" />
+        </a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all">Inicio</a>
+          <a href="carreras.html" class="px-4 py-2 text-sm font-medium text-white bg-upg-green rounded-lg">Carreras</a>
+          <a href="../index.html#nosotros" class="px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all">Nosotros</a>
+          <a href="../index.html#noticias" class="px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all">Noticias</a>
+          <a href="contacto.html" class="px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all">Contacto</a>
+        </div>
+        <a href="contacto.html#inscripcion" class="bg-upg-orange hover:bg-upg-orange-light text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">Inscribirse</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <section class="bg-gradient-to-br from-upg-green-dark via-upg-green to-upg-green-light py-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image:url('data:image/svg+xml,<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"%23ffffff\"><path d=\"M0 40L40 0H20L0 20M40 40V20L20 40\"/></g></svg>')"></div>
+    <div class="relative max-w-7xl mx-auto px-6 text-white">
+      <nav class="flex items-center gap-2 text-sm text-green-100 mb-4">
+        <a href="../index.html" class="hover:text-white transition-colors">Inicio</a>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+        <span>Carreras</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-black mb-3">Oferta Académica</h1>
+      <p class="text-green-100 text-lg max-w-2xl">Descubrí nuestras carreras de grado y posgrado, diseñadas para formar profesionales competentes y comprometidos.</p>
+    </div>
+  </section>
+
+  <!-- Filter tabs -->
+  <div class="bg-white border-b border-gray-100 sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex gap-1 overflow-x-auto py-2" id="filter-tabs">
+        <button onclick="filterCareer('all')" class="filter-btn active whitespace-nowrap px-4 py-2 text-sm font-semibold rounded-lg transition-all" data-filter="all">Todas</button>
+        <button onclick="filterCareer('juridicas')" class="filter-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 transition-all" data-filter="juridicas">Ciencias Jurídicas</button>
+        <button onclick="filterCareer('tecnologia')" class="filter-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 transition-all" data-filter="tecnologia">Tecnología</button>
+        <button onclick="filterCareer('economicas')" class="filter-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 transition-all" data-filter="economicas">Ciencias Económicas</button>
+        <button onclick="filterCareer('salud')" class="filter-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 transition-all" data-filter="salud">Ciencias de la Salud</button>
+        <button onclick="filterCareer('educacion')" class="filter-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 transition-all" data-filter="educacion">Educación</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Careers list -->
+  <main class="py-16 bg-upg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Ciencias Jurídicas -->
+      <div class="mb-16 career-section" data-category="juridicas">
+        <div class="flex items-center gap-3 mb-8" data-aos="fade-up">
+          <div class="w-1 h-8 bg-upg-green rounded-full"></div>
+          <h2 class="text-2xl font-black text-upg-green">Ciencias Jurídicas y Sociales</h2>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div id="derecho" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up">
+            <div class="h-3 bg-upg-green"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">⚖️</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Derecho</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">5 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Formamos abogados con sólida ética profesional, profundo conocimiento del sistema jurídico paraguayo e internacional, y capacidad para defender los derechos humanos.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-upg-orange mt-0.5">✓</span>Ejercicio de la abogacía en litigio y consultoría</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-upg-orange mt-0.5">✓</span>Cargos judiciales y en organismos del Estado</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-upg-orange mt-0.5">✓</span>Asesoría legal empresarial</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=derecho" class="block w-full text-center bg-upg-green hover:bg-upg-green-light text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tecnología e Ingeniería -->
+      <div class="mb-16 career-section" data-category="tecnologia">
+        <div class="flex items-center gap-3 mb-8" data-aos="fade-up">
+          <div class="w-1 h-8 bg-emerald-600 rounded-full"></div>
+          <h2 class="text-2xl font-black text-upg-green">Tecnología e Ingeniería</h2>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          <div id="informatica" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="0">
+            <div class="h-3 bg-emerald-600"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">💻</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Ingeniería Informática</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">5 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Desarrollamos ingenieros capaces de diseñar, implementar y gestionar sistemas de software y hardware de alta complejidad, con énfasis en inteligencia artificial y desarrollo web.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-emerald-600 mt-0.5">✓</span>Desarrollo de software y aplicaciones web/móvil</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-emerald-600 mt-0.5">✓</span>Administración de redes y ciberseguridad</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-emerald-600 mt-0.5">✓</span>Análisis de datos e Inteligencia Artificial</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=informatica" class="block w-full text-center bg-emerald-700 hover:bg-emerald-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+
+          <div id="civil" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-3 bg-orange-500"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">🏗️</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Ingeniería Civil</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">5 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Formamos ingenieros civiles con competencias para planificar, diseñar y ejecutar obras de infraestructura vial, hidráulica y construcción sostenible.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-orange-500 mt-0.5">✓</span>Diseño y dirección de obras civiles</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-orange-500 mt-0.5">✓</span>Supervisión de proyectos de construcción</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-orange-500 mt-0.5">✓</span>Gestión ambiental y urbana</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=civil" class="block w-full text-center bg-orange-600 hover:bg-orange-500 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+
+          <div id="arquitectura" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-3 bg-slate-600"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">🏛️</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Arquitectura</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">5 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Desarrollamos arquitectos creativos, técnicamente competentes y socialmente comprometidos, capaces de crear espacios habitables, estéticos y sostenibles.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-slate-600 mt-0.5">✓</span>Diseño y planificación arquitectónica</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-slate-600 mt-0.5">✓</span>Arquitectura sustentable y bioclimática</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-slate-600 mt-0.5">✓</span>Diseño urbano y paisajismo</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=arquitectura" class="block w-full text-center bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ciencias Económicas -->
+      <div class="mb-16 career-section" data-category="economicas">
+        <div class="flex items-center gap-3 mb-8" data-aos="fade-up">
+          <div class="w-1 h-8 bg-violet-600 rounded-full"></div>
+          <h2 class="text-2xl font-black text-upg-green">Ciencias Económicas y Administrativas</h2>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          <div id="administracion" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="0">
+            <div class="h-3 bg-violet-600"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">📊</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Administración de Empresas</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">4 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Preparamos líderes empresariales con visión estratégica y capacidad para gestionar organizaciones en entornos locales e internacionales.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-violet-600 mt-0.5">✓</span>Gerencia y dirección empresarial</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-violet-600 mt-0.5">✓</span>Emprendimiento e innovación</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-violet-600 mt-0.5">✓</span>Consultoría y asesoramiento organizacional</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=administracion" class="block w-full text-center bg-violet-700 hover:bg-violet-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+
+          <div id="contabilidad" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-3 bg-cyan-600"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">📋</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Contabilidad</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">4 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Formamos contadores capaces de gestionar la información financiera y tributaria de empresas e instituciones con alta precisión y ética profesional.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-cyan-600 mt-0.5">✓</span>Auditoría y contabilidad pública y privada</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-cyan-600 mt-0.5">✓</span>Asesoramiento tributario y fiscal</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-cyan-600 mt-0.5">✓</span>Análisis y gestión financiera</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=contabilidad" class="block w-full text-center bg-cyan-700 hover:bg-cyan-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ciencias de la Salud -->
+      <div class="mb-16 career-section" data-category="salud">
+        <div class="flex items-center gap-3 mb-8" data-aos="fade-up">
+          <div class="w-1 h-8 bg-rose-600 rounded-full"></div>
+          <h2 class="text-2xl font-black text-upg-green">Ciencias de la Salud</h2>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          <div id="enfermeria" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up">
+            <div class="h-3 bg-rose-600"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">🏥</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Enfermería</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">4 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Formamos profesionales de la salud con sólidos conocimientos científicos y técnicos, comprometidos con el cuidado integral del ser humano.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-rose-600 mt-0.5">✓</span>Atención de pacientes en hospitales y clínicas</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-rose-600 mt-0.5">✓</span>Gestión de servicios de salud</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-rose-600 mt-0.5">✓</span>Salud comunitaria y prevención</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=enfermeria" class="block w-full text-center bg-rose-700 hover:bg-rose-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+
+          <div id="psicologia" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-3 bg-pink-600"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">🧠</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Psicología</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">5 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Desarrollamos psicólogos con capacidad para comprender, evaluar e intervenir en los procesos psicológicos del individuo y los grupos sociales.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-pink-600 mt-0.5">✓</span>Psicología clínica y terapia</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-pink-600 mt-0.5">✓</span>Psicología organizacional y laboral</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-pink-600 mt-0.5">✓</span>Psicología educativa y orientación</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=psicologia" class="block w-full text-center bg-pink-700 hover:bg-pink-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ciencias de la Educación -->
+      <div class="mb-16 career-section" data-category="educacion">
+        <div class="flex items-center gap-3 mb-8" data-aos="fade-up">
+          <div class="w-1 h-8 bg-upg-orange rounded-full"></div>
+          <h2 class="text-2xl font-black text-upg-green">Ciencias de la Educación</h2>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div id="educacion" class="career-detail-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up">
+            <div class="h-3 bg-upg-orange"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-4 mb-5">
+                <div class="text-3xl">📚</div>
+                <div>
+                  <h3 class="font-bold text-upg-green text-xl">Ciencias de la Educación</h3>
+                  <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">4 años · Grado</span>
+                </div>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Formamos educadores comprometidos con la transformación social, con dominio pedagógico y capacidad de adaptación a los desafíos educativos contemporáneos.</p>
+              <div class="space-y-2 mb-5">
+                <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perfil del egresado</div>
+                <ul class="space-y-1.5">
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-upg-orange mt-0.5">✓</span>Docencia en educación media y superior</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-upg-orange mt-0.5">✓</span>Gestión y administración educativa</li>
+                  <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-upg-orange mt-0.5">✓</span>Diseño curricular e innovación pedagógica</li>
+                </ul>
+              </div>
+              <a href="contacto.html?carrera=educacion" class="block w-full text-center bg-yellow-700 hover:bg-yellow-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Solicitar información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CTA bottom -->
+  <section class="py-16 bg-upg-green text-white text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-3xl font-black mb-4">¿No encontrás tu carrera?</h2>
+      <p class="text-green-100 mb-8">Contactanos y te asesoramos sobre nuestra oferta académica completa, incluidos posgrados y cursos de extensión.</p>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-upg-orange hover:bg-upg-orange-light text-white font-bold px-8 py-3.5 rounded-xl transition-colors shadow-lg">
+        Hablar con un asesor
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer simplified -->
+  <footer class="bg-upg-green-dark text-gray-400 py-8 text-center text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <span>© 2026 Universidad Privada del Guairá</span>
+      <a href="../index.html" class="text-upg-orange-light hover:text-upg-orange transition-colors">← Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: true, offset: 50 });
+
+    // Filter functionality
+    function filterCareer(category) {
+      // Update active tab
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const isActive = btn.dataset.filter === category;
+        btn.classList.toggle('bg-upg-green', isActive);
+        btn.classList.toggle('text-white', isActive);
+        btn.classList.toggle('active', isActive);
+        btn.classList.toggle('text-gray-600', !isActive);
+      });
+
+      // Show/hide sections
+      document.querySelectorAll('.career-section').forEach(section => {
+        if (category === 'all' || section.dataset.category === category) {
+          section.style.display = '';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+
+    // Set initial active state
+    document.querySelector('[data-filter="all"]').classList.add('bg-upg-green', 'text-white');
+
+    // Handle URL hash navigation
+    if (location.hash) {
+      setTimeout(() => {
+        const el = document.querySelector(location.hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+
+    // Pre-fill contact form if URL has carrera param
+    const urlParams = new URLSearchParams(location.search);
+    if (urlParams.get('carrera')) {
+      // Store for contact page
+      sessionStorage.setItem('carrera_seleccionada', urlParams.get('carrera'));
+    }
+  </script>
+</body>
+</html>

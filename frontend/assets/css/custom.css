@@ -1,0 +1,126 @@
+/* ── UPG Custom Styles ───────────────────────────────────── */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B6B2B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2C8C3C;
+}
+
+/* Navbar scroll effect — applied via JS */
+#navbar.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,.08);
+}
+
+/* Line-clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Career card image hover zoom */
+.career-card .h-44 {
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+.career-card:hover .h-44 > * {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+/* Form focus ring */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  animation: slideInRight 0.3s ease;
+  max-width: 340px;
+}
+.toast.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+.toast.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* Filter button active state */
+.filter-btn.active {
+  background: #1B6B2B;
+  color: #ffffff;
+}
+
+/* Franja bandera paraguaya — 3px rojo + 3px blanco + 3px azul al tope del sitio */
+body::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right,
+    #C8102E 0% 33.3%,
+    #FFFFFF 33.3% 66.6%,
+    #002D62 66.6% 100%
+  );
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* AOS custom duration */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Counter animation */
+.counter {
+  display: inline-block;
+}
+
+/* Dropdown hover fix */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
