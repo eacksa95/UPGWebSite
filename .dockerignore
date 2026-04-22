@@ -1,0 +1,21 @@
+# No enviar al contexto de build de Docker
+frontend/
+.git/
+.gitignore
+.gitattributes
+README.md
+LICENSE
+
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+
+# DB local
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
+
+# Env
+backend/.env
