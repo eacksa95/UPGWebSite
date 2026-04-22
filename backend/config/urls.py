@@ -2,8 +2,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    # Frontend — servido como templates estáticos
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    path('pages/carreras.html', TemplateView.as_view(template_name='pages/carreras.html')),
+    path('pages/contacto.html', TemplateView.as_view(template_name='pages/contacto.html')),
+
+    # Backend
     path('admin/', admin.site.urls),
     path('api/contenido/',   include('apps.contenido.urls')),
     path('api/contacto/',    include('apps.contacto.urls')),

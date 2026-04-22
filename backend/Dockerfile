@@ -11,6 +11,8 @@ COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/ .
+# Frontend copiado dentro del backend para que WhiteNoise y TemplateView lo encuentren
+COPY frontend/ ./frontend/
 
 RUN python manage.py collectstatic --noinput
 

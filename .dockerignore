@@ -1,5 +1,5 @@
 # No enviar al contexto de build de Docker
-frontend/
+# frontend/ se incluye — lo necesita Django para WhiteNoise y TemplateView
 .git/
 .gitignore
 .gitattributes
