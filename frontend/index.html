@@ -154,11 +154,11 @@
   <!-- ══════════════════════════════════════════════
        HERO
   ══════════════════════════════════════════════ -->
-  <section id="hero" class="relative min-h-[90vh] flex items-center overflow-hidden">
+  <section id="hero" class="relative min-h-[80vh] flex items-center overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-upg-green-dark via-upg-green to-upg-green-light"></div>
     <div class="absolute inset-0 opacity-[0.07]" style="background-image:url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23ffffff\" fill-opacity=\"1\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>')"></div>
 
-    <div class="relative max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative max-w-7xl mx-auto px-6 pt-8 pb-14 md:pt-10 md:pb-16 grid lg:grid-cols-2 gap-12 items-center">
 
       <!-- Text content -->
       <div data-aos="fade-right" data-aos-duration="800">
@@ -187,8 +187,8 @@
           </a>
         </div>
 
-        <!-- Feature pills — sin números -->
-        <div class="flex flex-wrap gap-3">
+        <!-- Feature pills — 2x2 -->
+        <div class="grid grid-cols-2 gap-2 max-w-xs">
           <span class="flex items-center gap-1.5 text-xs text-green-200 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
             <svg class="w-3.5 h-3.5 text-upg-orange-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             Acreditada por el CONES
@@ -232,65 +232,132 @@
 
     </div>
 
-    <!-- Wave bottom — sin border después -->
-    <div class="absolute bottom-0 left-0 right-0">
-      <svg viewBox="0 0 1440 60" fill="white" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,60 C240,20 480,0 720,10 C960,20 1200,40 1440,30 L1440,60 Z"/>
-      </svg>
-    </div>
   </section>
 
   <!-- ══════════════════════════════════════════════
-       FACULTAD DE ENFERMERÍA — DESTACADO
+       LICENCIATURA EN ENFERMERÍA — DESTACADO
   ══════════════════════════════════════════════ -->
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-100 rounded-3xl overflow-hidden" data-aos="fade-up">
-        <div class="flex flex-col lg:flex-row items-center gap-0">
+      <div class="grid lg:grid-cols-5 gap-10 xl:gap-16 items-center">
 
-          <!-- Color strip left -->
-          <div class="lg:w-2 lg:self-stretch bg-rose-600 w-full h-2"></div>
+        <!-- ── Columna visual (2/5) ── -->
+        <div class="lg:col-span-2" data-aos="fade-right">
 
-          <div class="flex flex-col lg:flex-row items-center gap-8 p-8 lg:p-10 w-full">
-            <!-- Icon -->
-            <div class="flex-shrink-0 w-24 h-24 bg-rose-600 rounded-2xl flex items-center justify-center text-5xl shadow-lg">🏥</div>
+          <!-- Tarjeta principal -->
+          <div class="relative bg-gradient-to-br from-rose-700 via-rose-600 to-pink-500 rounded-3xl p-8 text-white overflow-hidden shadow-xl">
+            <!-- Círculos decorativos -->
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full pointer-events-none"></div>
+            <div class="absolute -bottom-10 -left-10 w-36 h-36 bg-white/10 rounded-full pointer-events-none"></div>
 
-            <!-- Content -->
-            <div class="flex-1 text-center lg:text-left">
-              <div class="inline-flex items-center gap-2 bg-rose-100 text-rose-700 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
-                <span class="w-1.5 h-1.5 bg-rose-600 rounded-full animate-pulse"></span>
-                Carrera Principal · Sede Villarrica
-              </div>
-              <h2 class="text-2xl md:text-3xl font-black text-gray-800 mb-3">Licenciatura en Enfermería</h2>
-              <p class="text-gray-600 leading-relaxed mb-5 max-w-xl">La Facultad de Ciencias de la Salud es el corazón de la UPG Villarrica. Formamos profesionales de enfermería con sólida base científica y profundo compromiso con el cuidado humano, la salud comunitaria y el desarrollo sanitario del Paraguay.</p>
-              <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <a href="pages/carreras.html#enfermeria" class="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-bold px-6 py-3 rounded-xl transition-colors shadow-sm">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/></svg>
-                  Ver carrera completa
-                </a>
-                <a href="pages/contacto.html#inscripcion" class="inline-flex items-center gap-2 border-2 border-rose-600 text-rose-700 hover:bg-rose-50 font-bold px-6 py-3 rounded-xl transition-colors">
-                  Inscribirse ahora
-                </a>
-              </div>
+            <!-- Badge -->
+            <div class="relative z-10 inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-xs font-bold px-3 py-1.5 rounded-full mb-6 border border-white/25">
+              <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+              Carrera Principal · Sede Villarrica
             </div>
 
-            <!-- Stats -->
-            <div class="flex-shrink-0 grid grid-cols-3 lg:grid-cols-1 gap-3 w-full lg:w-32">
-              <div class="bg-white rounded-2xl p-4 text-center shadow-sm border border-rose-100">
-                <div class="text-2xl font-black text-rose-600">4</div>
-                <div class="text-xs text-gray-500 leading-tight mt-1">Años de duración</div>
+            <!-- Ícono + título -->
+            <div class="relative z-10 mb-7">
+              <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-4xl mb-4 shadow-inner">🏥</div>
+              <h3 class="text-3xl font-black leading-tight mb-1">Licenciatura<br/>en Enfermería</h3>
+              <p class="text-rose-200 text-sm font-medium">Facultad de Ciencias de la Salud</p>
+            </div>
+
+            <!-- Datos rápidos -->
+            <div class="relative z-10 grid grid-cols-3 gap-3">
+              <div class="bg-white/15 rounded-2xl p-3.5 text-center border border-white/10">
+                <div class="text-2xl font-black leading-none">4</div>
+                <div class="text-xs text-rose-200 mt-1">Años</div>
               </div>
-              <div class="bg-white rounded-2xl p-4 text-center shadow-sm border border-rose-100">
-                <div class="text-lg font-black text-rose-600">Pres.</div>
-                <div class="text-xs text-gray-500 leading-tight mt-1">Modalidad</div>
+              <div class="bg-white/15 rounded-2xl p-3.5 text-center border border-white/10">
+                <div class="text-sm font-black leading-none">Pres.</div>
+                <div class="text-xs text-rose-200 mt-1">Modalidad</div>
               </div>
-              <div class="bg-white rounded-2xl p-4 text-center shadow-sm border border-rose-100">
-                <div class="text-sm font-black text-rose-600">Lic.</div>
-                <div class="text-xs text-gray-500 leading-tight mt-1">Título otorgado</div>
+              <div class="bg-white/15 rounded-2xl p-3.5 text-center border border-white/10">
+                <div class="text-sm font-black leading-none">Lic.</div>
+                <div class="text-xs text-rose-200 mt-1">Título</div>
               </div>
             </div>
           </div>
+
+          <!-- Tarjeta informativa flotante -->
+          <div class="mt-4 bg-rose-50 border border-rose-100 rounded-2xl p-4 flex items-center gap-4">
+            <div class="w-11 h-11 bg-rose-100 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <p class="text-sm font-bold text-rose-700">Alta demanda laboral</p>
+              <p class="text-xs text-gray-500 mt-0.5">Profesionales de enfermería con salida laboral inmediata en el sistema de salud público y privado.</p>
+            </div>
+          </div>
         </div>
+
+        <!-- ── Columna de contenido (3/5) ── -->
+        <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
+          <span class="text-rose-500 font-semibold text-sm uppercase tracking-widest">Carrera Destacada</span>
+
+          <h2 class="text-3xl md:text-4xl font-black text-gray-800 mt-2 mb-2 leading-tight">
+            Una vocación que<br/>
+            <span class="text-rose-600">transforma vidas</span>
+          </h2>
+          <p class="text-upg-green font-semibold text-sm mb-5">Cuidar es la profesión más humana del mundo.</p>
+
+          <p class="text-gray-500 leading-relaxed mb-8">
+            En la UPG aprendés junto a docentes que ejercen en hospitales reales, en laboratorios equipados y con prácticas desde el primer año. Formamos enfermeros y enfermeras comprometidos con el bienestar de las personas, capaces de trabajar en cualquier nivel del sistema de salud paraguayo.
+          </p>
+
+          <!-- Highlights 2x2 -->
+          <div class="grid sm:grid-cols-2 gap-5 mb-8">
+            <div class="flex gap-3 items-start">
+              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-bold text-gray-800 text-sm">Vocación de servicio</p>
+                <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Formación humana integral para el cuidado con empatía y compromiso ético.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9"/></svg>
+              </div>
+              <div>
+                <p class="font-bold text-gray-800 text-sm">Prácticas hospitalarias</p>
+                <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Convenios con el Hospital Regional de Villarrica y centros de salud locales.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <div>
+                <p class="font-bold text-gray-800 text-sm">Plan de estudios actualizado</p>
+                <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Currícula alineada al Ministerio de Salud Pública del Paraguay (MSPBS).</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-bold text-gray-800 text-sm">Docentes activos en salud</p>
+                <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Profesores que ejercen la profesión y conocen la realidad del sistema sanitario.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-3">
+            <a href="pages/carreras.html#enfermeria" class="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+              Ver carrera completa
+            </a>
+            <a href="pages/contacto.html#inscripcion" class="inline-flex items-center gap-2 border-2 border-rose-200 text-rose-700 hover:bg-rose-50 hover:border-rose-400 font-semibold px-6 py-3 rounded-xl transition-all">
+              Inscribirme en Enfermería
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
