@@ -1,8 +1,18 @@
 /* ── UPG Custom Styles ───────────────────────────────────── */
 
-/* Smooth scrolling */
+/* Smooth scrolling + scroll snap por sección */
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-margin-top: 52px;
+}
+
+footer {
+  scroll-snap-align: start;
 }
 
 /* Hide scrollbar for Chrome/Safari */
