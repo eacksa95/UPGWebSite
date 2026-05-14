@@ -63,9 +63,7 @@
         </span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="pages/contacto.html" class="text-gray-300 hover:text-upg-orange-light transition-colors">Contacto</a>
         <a href="https://mooc.uniupg.edu.py" target="_blank" class="text-gray-300 hover:text-upg-orange-light transition-colors">Campus Virtual</a>
-        <a href="#" class="bg-upg-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-upg-orange-light transition-colors">Iniciar Sesión</a>
       </div>
     </div>
   </div>
@@ -75,11 +73,11 @@
   ══════════════════════════════════════════════ -->
   <nav id="navbar" class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="flex items-center justify-between h-18 py-3">
+      <div class="flex items-center justify-between py-2">
 
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2 group">
-          <img src="assets/img/logo.png" alt="Universidad Privada del Guairá" class="h-14 w-auto" />
+          <img src="assets/img/logo.png" alt="Universidad Privada del Guairá" class="h-10 w-auto" />
         </a>
 
         <!-- Desktop nav links -->
@@ -93,12 +91,12 @@
               <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
-              <div class="px-3 py-1.5 text-xs font-semibold text-rose-500 uppercase tracking-wider flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 bg-rose-500 rounded-full"></span>Ciencias de la Salud — Sede Principal
+              <div class="px-3 py-1.5 text-xs font-semibold text-sky-500 uppercase tracking-wider flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>Ciencias de la Salud — Sede Principal
               </div>
-              <a href="pages/carreras.html#enfermeria" class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-rose-700 bg-rose-50 hover:bg-rose-100 transition-colors">
+              <a href="pages/carreras.html#enfermeria" class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-sky-700 bg-sky-50 hover:bg-sky-100 transition-colors">
                 🏥 Enfermería
-                <span class="ml-auto text-xs bg-rose-600 text-white px-1.5 py-0.5 rounded">Destacada</span>
+                <span class="ml-auto text-xs bg-sky-600 text-white px-1.5 py-0.5 rounded">Destacada</span>
               </a>
               <a href="pages/carreras.html#psicologia" class="block px-4 py-2 text-sm text-gray-700 hover:bg-upg-green hover:text-white transition-colors">🧠 Psicología</a>
               <div class="border-t border-gray-100 my-1"></div>
@@ -118,6 +116,7 @@
           </div>
 
           <a href="#nosotros" class="nav-link px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all duration-200">Nosotros</a>
+          <a href="#filiales" class="nav-link px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all duration-200">Filiales</a>
           <a href="#noticias" class="nav-link px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all duration-200">Noticias</a>
           <a href="https://www.uniupg.edu.py/biblioteca/" target="_blank" class="nav-link px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all duration-200">Biblioteca</a>
           <a href="pages/contacto.html" class="nav-link px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-upg-green hover:text-white transition-all duration-200">Contacto</a>
@@ -144,6 +143,7 @@
         <a href="index.html" class="px-4 py-2.5 text-sm font-medium text-upg-green bg-green-50 rounded-lg">Inicio</a>
         <a href="pages/carreras.html" class="px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Carreras</a>
         <a href="#nosotros" class="px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg" onclick="closeMobileMenu()">Nosotros</a>
+        <a href="#filiales" class="px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg" onclick="closeMobileMenu()">Filiales</a>
         <a href="#noticias" class="px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg" onclick="closeMobileMenu()">Noticias</a>
         <a href="pages/contacto.html" class="px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Contacto</a>
         <a href="pages/contacto.html#inscripcion" class="mt-2 px-4 py-2.5 text-sm font-semibold text-white bg-upg-orange rounded-lg text-center">Inscribirse</a>
@@ -154,80 +154,85 @@
   <!-- ══════════════════════════════════════════════
        HERO
   ══════════════════════════════════════════════ -->
-  <section id="hero" class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-upg-green-dark via-upg-green to-upg-green-light"></div>
-    <div class="absolute inset-0 opacity-[0.07]" style="background-image:url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23ffffff\" fill-opacity=\"1\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>')"></div>
+  <section id="hero" class="relative min-h-[82vh] flex items-center overflow-hidden">
+    <!-- Fondo suave — crema a blanco con tinte verde -->
+    <div class="absolute inset-0 bg-gradient-to-br from-upg-cream via-white to-emerald-50"></div>
+    <!-- Panel decorativo derecho -->
+    <div class="absolute right-0 top-0 w-2/5 h-full bg-gradient-to-l from-upg-green/5 to-transparent pointer-events-none hidden lg:block"></div>
+    <!-- Círculo decorativo fondo -->
+    <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-upg-green/5 rounded-full pointer-events-none"></div>
 
-    <div class="relative max-w-7xl mx-auto px-6 pt-8 pb-14 md:pt-10 md:pb-16 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative w-full px-6 lg:px-16 xl:px-24 pt-8 pb-10 md:pt-8 md:pb-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
       <!-- Text content -->
-      <div data-aos="fade-right" data-aos-duration="800">
-        <div class="inline-flex items-center gap-2 bg-upg-orange/25 border border-upg-orange/50 text-upg-orange-light text-sm font-bold px-4 py-2 rounded-full mb-7">
-          <span class="w-2 h-2 bg-upg-orange-light rounded-full animate-pulse"></span>
+      <div data-aos="fade-right" data-aos-duration="600">
+        <div class="inline-flex items-center gap-2 bg-upg-orange/10 border border-upg-orange/30 text-upg-orange text-sm font-bold px-4 py-2 rounded-full mb-5">
+          <span class="w-2 h-2 bg-upg-orange rounded-full animate-pulse"></span>
           Inscripciones Abiertas · Inicio de Clases Febrero 2026
         </div>
 
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-upg-green-dark leading-[1.08] mb-4">
           Elegí bien<br/>
           y estudiá<br/>
-          <span class="text-upg-orange-light">con nosotros</span>
+          <span class="text-upg-orange">con nosotros</span>
         </h1>
 
-        <p class="text-green-100 text-lg leading-relaxed mb-9 max-w-lg">
-          En la UPG vas a encontrar docentes comprometidos, un campus que se siente como en casa y carreras que abren puertas de verdad. <strong class="text-white font-semibold">La Universidad como vos.</strong>
+        <p class="text-gray-500 text-base leading-relaxed mb-6 max-w-xl">
+          En la UPG vas a encontrar docentes comprometidos, un campus que se siente como en casa y carreras que abren puertas de verdad. <strong class="text-upg-green font-semibold">La Universidad como vos.</strong>
         </p>
 
-        <div class="flex flex-wrap gap-4 mb-10">
-          <a href="pages/carreras.html" class="inline-flex items-center gap-2 bg-upg-orange hover:bg-upg-orange-light text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <a href="pages/carreras.html" class="inline-flex items-center gap-2 bg-upg-orange hover:bg-upg-orange-light text-white font-bold px-6 py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
             Ver Carreras
           </a>
-          <a href="pages/contacto.html#inscripcion" class="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white font-bold px-7 py-3.5 rounded-xl border border-white/30 transition-all duration-200 hover:-translate-y-0.5">
+          <a href="pages/contacto.html#inscripcion" class="inline-flex items-center gap-2 bg-upg-green hover:bg-upg-green-dark text-white font-bold px-6 py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5">
             Inscribirse ahora →
           </a>
         </div>
 
         <!-- Feature pills — 2x2 -->
-        <div class="grid grid-cols-2 gap-2 max-w-xs">
-          <span class="flex items-center gap-1.5 text-xs text-green-200 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-            <svg class="w-3.5 h-3.5 text-upg-orange-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        <div class="grid grid-cols-2 gap-2 max-w-sm">
+          <span class="flex items-center gap-1.5 text-xs text-gray-600 bg-white px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-upg-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             Acreditada por el CONES
           </span>
-          <span class="flex items-center gap-1.5 text-xs text-green-200 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-            <svg class="w-3.5 h-3.5 text-upg-orange-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="flex items-center gap-1.5 text-xs text-gray-600 bg-white px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-upg-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             Campus virtual incluido
           </span>
-          <span class="flex items-center gap-1.5 text-xs text-green-200 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-            <svg class="w-3.5 h-3.5 text-upg-orange-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="flex items-center gap-1.5 text-xs text-gray-600 bg-white px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-upg-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             Becas disponibles
           </span>
-          <span class="flex items-center gap-1.5 text-xs text-green-200 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-            <svg class="w-3.5 h-3.5 text-upg-orange-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="flex items-center gap-1.5 text-xs text-gray-600 bg-white px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-upg-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             Filiales en todo Paraguay
           </span>
         </div>
       </div>
 
-      <!-- Promo images — poster + egresados -->
-      <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" class="relative flex justify-center items-center min-h-[420px] lg:min-h-[520px]">
+      <!-- Promo images -->
+      <div data-aos="fade-left" data-aos-duration="600" data-aos-delay="100" class="relative flex justify-center items-center min-h-[320px] lg:min-h-[400px]">
 
-        <!-- Flyer 2026 — poster principal -->
-        <div class="relative z-10 rotate-2 shadow-2xl rounded-2xl overflow-hidden w-64 md:w-72 border-4 border-white/20 hover:rotate-0 transition-transform duration-500">
-          <img src="assets/images/postInstagram/inscripcionesabiertas2026.jpg" alt="Convocatoria 2026 — Inscripciones Abiertas UPG" class="w-full block" />
+        <!-- Flyer Enfermería — poster principal -->
+        <div class="relative z-10 rotate-1 shadow-xl rounded-2xl overflow-hidden w-52 md:w-60 border-4 border-white hover:rotate-0 transition-transform duration-500 ring-1 ring-gray-200">
+          <img src="assets/images/postInstagram/Enfermeria.png" alt="Enfermería UPG — Inscripciones 2026" class="w-full block" />
         </div>
 
-        <!-- Foto egresados — tarjeta secundaria -->
-        <div class="absolute bottom-0 -left-2 md:-left-10 z-20 -rotate-3 shadow-xl rounded-xl overflow-hidden w-44 md:w-52 border-4 border-white/30 hover:rotate-0 transition-transform duration-500">
-          <img src="assets/images/sociales/defensadetesis.jpg" alt="Egresados UPG — Defensa de Tesis" class="w-full block" />
+        <!-- Foto estudiantes — tarjeta secundaria -->
+        <div class="absolute bottom-0 -left-2 md:-left-8 z-20 -rotate-2 shadow-lg rounded-xl overflow-hidden w-38 md:w-44 border-4 border-white hover:rotate-0 transition-transform duration-500">
+          <img src="assets/images/sociales/estudiantesenfermeria1.jpg" alt="Estudiantes de Enfermería UPG" class="w-full block" />
           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent px-3 py-2">
-            <p class="text-white text-xs font-semibold leading-tight">Nuestros egresados</p>
-            <p class="text-green-300 text-[10px]">Defensa de Tesis 2025</p>
+            <p class="text-white text-xs font-semibold leading-tight">Nuestros estudiantes</p>
+            <p class="text-sky-300 text-[10px]">Enfermería · UPG 2025</p>
           </div>
         </div>
 
-        <!-- Decorative ring -->
-        <div class="absolute top-8 right-0 w-32 h-32 border-4 border-upg-orange/20 rounded-full"></div>
-        <div class="absolute top-12 right-4 w-20 h-20 border-2 border-white/10 rounded-full"></div>
+        <!-- Decorativos — tonos suaves para fondo claro -->
+        <div class="absolute top-6 right-0 w-28 h-28 border-4 border-upg-green/15 rounded-full"></div>
+        <div class="absolute top-10 right-4 w-16 h-16 border-2 border-upg-orange/10 rounded-full"></div>
+        <div class="absolute -bottom-2 right-6 w-16 h-16 bg-upg-green/5 rounded-2xl rotate-12"></div>
       </div>
 
     </div>
@@ -245,7 +250,7 @@
         <div class="lg:col-span-2" data-aos="fade-right">
 
           <!-- Tarjeta principal -->
-          <div class="relative bg-gradient-to-br from-rose-700 via-rose-600 to-pink-500 rounded-3xl p-8 text-white overflow-hidden shadow-xl">
+          <div class="relative bg-gradient-to-br from-sky-700 via-sky-600 to-sky-400 rounded-3xl p-8 text-white overflow-hidden shadow-xl">
             <!-- Círculos decorativos -->
             <div class="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full pointer-events-none"></div>
             <div class="absolute -bottom-10 -left-10 w-36 h-36 bg-white/10 rounded-full pointer-events-none"></div>
@@ -260,33 +265,33 @@
             <div class="relative z-10 mb-7">
               <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-4xl mb-4 shadow-inner">🏥</div>
               <h3 class="text-3xl font-black leading-tight mb-1">Licenciatura<br/>en Enfermería</h3>
-              <p class="text-rose-200 text-sm font-medium">Facultad de Ciencias de la Salud</p>
+              <p class="text-sky-200 text-sm font-medium">Facultad de Ciencias de la Salud</p>
             </div>
 
             <!-- Datos rápidos -->
             <div class="relative z-10 grid grid-cols-3 gap-3">
               <div class="bg-white/15 rounded-2xl p-3.5 text-center border border-white/10">
                 <div class="text-2xl font-black leading-none">4</div>
-                <div class="text-xs text-rose-200 mt-1">Años</div>
+                <div class="text-xs text-sky-200 mt-1">Años</div>
               </div>
               <div class="bg-white/15 rounded-2xl p-3.5 text-center border border-white/10">
                 <div class="text-sm font-black leading-none">Pres.</div>
-                <div class="text-xs text-rose-200 mt-1">Modalidad</div>
+                <div class="text-xs text-sky-200 mt-1">Modalidad</div>
               </div>
               <div class="bg-white/15 rounded-2xl p-3.5 text-center border border-white/10">
                 <div class="text-sm font-black leading-none">Lic.</div>
-                <div class="text-xs text-rose-200 mt-1">Título</div>
+                <div class="text-xs text-sky-200 mt-1">Título</div>
               </div>
             </div>
           </div>
 
           <!-- Tarjeta informativa flotante -->
-          <div class="mt-4 bg-rose-50 border border-rose-100 rounded-2xl p-4 flex items-center gap-4">
-            <div class="w-11 h-11 bg-rose-100 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <div class="mt-4 bg-sky-50 border border-sky-100 rounded-2xl p-4 flex items-center gap-4">
+            <div class="w-11 h-11 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
             <div>
-              <p class="text-sm font-bold text-rose-700">Alta demanda laboral</p>
+              <p class="text-sm font-bold text-sky-700">Alta demanda laboral</p>
               <p class="text-xs text-gray-500 mt-0.5">Profesionales de enfermería con salida laboral inmediata en el sistema de salud público y privado.</p>
             </div>
           </div>
@@ -294,11 +299,11 @@
 
         <!-- ── Columna de contenido (3/5) ── -->
         <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
-          <span class="text-rose-500 font-semibold text-sm uppercase tracking-widest">Carrera Destacada</span>
+          <span class="text-sky-500 font-semibold text-sm uppercase tracking-widest">Carrera Destacada</span>
 
           <h2 class="text-3xl md:text-4xl font-black text-gray-800 mt-2 mb-2 leading-tight">
             Una vocación que<br/>
-            <span class="text-rose-600">transforma vidas</span>
+            <span class="text-sky-600">transforma vidas</span>
           </h2>
           <p class="text-upg-green font-semibold text-sm mb-5">Cuidar es la profesión más humana del mundo.</p>
 
@@ -309,8 +314,8 @@
           <!-- Highlights 2x2 -->
           <div class="grid sm:grid-cols-2 gap-5 mb-8">
             <div class="flex gap-3 items-start">
-              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              <div class="w-9 h-9 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
               </div>
               <div>
                 <p class="font-bold text-gray-800 text-sm">Vocación de servicio</p>
@@ -318,8 +323,8 @@
               </div>
             </div>
             <div class="flex gap-3 items-start">
-              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9"/></svg>
+              <div class="w-9 h-9 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9"/></svg>
               </div>
               <div>
                 <p class="font-bold text-gray-800 text-sm">Prácticas hospitalarias</p>
@@ -327,8 +332,8 @@
               </div>
             </div>
             <div class="flex gap-3 items-start">
-              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              <div class="w-9 h-9 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
               </div>
               <div>
                 <p class="font-bold text-gray-800 text-sm">Plan de estudios actualizado</p>
@@ -336,8 +341,8 @@
               </div>
             </div>
             <div class="flex gap-3 items-start">
-              <div class="w-9 h-9 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4.5 h-4.5 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div class="w-9 h-9 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4.5 h-4.5 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               </div>
               <div>
                 <p class="font-bold text-gray-800 text-sm">Docentes activos en salud</p>
@@ -348,11 +353,11 @@
 
           <!-- CTAs -->
           <div class="flex flex-wrap gap-3">
-            <a href="pages/carreras.html#enfermeria" class="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <a href="pages/carreras.html#enfermeria" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
               Ver carrera completa
             </a>
-            <a href="pages/contacto.html#inscripcion" class="inline-flex items-center gap-2 border-2 border-rose-200 text-rose-700 hover:bg-rose-50 hover:border-rose-400 font-semibold px-6 py-3 rounded-xl transition-all">
+            <a href="pages/contacto.html#inscripcion" class="inline-flex items-center gap-2 border-2 border-sky-200 text-sky-700 hover:bg-sky-50 hover:border-sky-400 font-semibold px-6 py-3 rounded-xl transition-all">
               Inscribirme en Enfermería
             </a>
           </div>
@@ -376,22 +381,22 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Enfermería — Carrera principal (PRIMERA y destacada) -->
-        <div class="career-card group sm:col-span-2 lg:col-span-1 bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border-2 border-rose-200 hover:border-rose-400 transition-all duration-300 hover:-translate-y-1 relative" data-aos="fade-up" data-aos-delay="0">
+        <div class="career-card group sm:col-span-2 lg:col-span-1 bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border-2 border-sky-200 hover:border-sky-400 transition-all duration-300 hover:-translate-y-1 relative" data-aos="fade-up" data-aos-delay="0">
           <div class="absolute top-3 right-3 z-10">
-            <span class="bg-rose-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">⭐ Principal</span>
+            <span class="bg-sky-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">⭐ Principal</span>
           </div>
-          <div class="h-44 bg-gradient-to-br from-rose-700 to-pink-500 flex items-center justify-center relative overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-sky-700 to-sky-400 flex items-center justify-center relative overflow-hidden">
             <div class="text-center z-10">
               <div class="text-5xl mb-2">🏥</div>
               <div class="text-white text-xs font-semibold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full">Ciencias de la Salud</div>
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-rose-700 text-lg mb-2">Licenciatura en Enfermería</h3>
+            <h3 class="font-bold text-sky-700 text-lg mb-2">Licenciatura en Enfermería</h3>
             <p class="text-gray-500 text-sm leading-relaxed mb-4">La carrera insignia de la sede Villarrica. Formamos profesionales de salud comprometidos con el cuidado integral del ser humano y la salud comunitaria del Paraguay.</p>
             <div class="flex items-center justify-between">
-              <span class="text-xs text-rose-600 bg-rose-50 font-medium px-2 py-1 rounded border border-rose-100">4 años · Presencial</span>
-              <a href="pages/carreras.html#enfermeria" class="text-rose-600 text-sm font-semibold hover:text-rose-800 transition-colors flex items-center gap-1">
+              <span class="text-xs text-sky-600 bg-sky-50 font-medium px-2 py-1 rounded border border-sky-100">4 años · Presencial</span>
+              <a href="pages/carreras.html#enfermeria" class="text-sky-600 text-sm font-semibold hover:text-sky-800 transition-colors flex items-center gap-1">
                 Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -555,6 +560,88 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
+       NUESTRAS FILIALES
+  ══════════════════════════════════════════════ -->
+  <section id="filiales" class="py-20 bg-upg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="text-upg-orange font-semibold text-sm uppercase tracking-widest">Red UPG</span>
+        <h2 class="text-3xl md:text-4xl font-black text-upg-green mt-2 mb-4">Presentes en todo Paraguay</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">Con más de 40 filiales en todo el país, la UPG lleva educación superior de calidad a cada rincón del Paraguay.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+        <!-- UPG Santa Ana — Filial Activa -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border-2 border-upg-orange/40 hover:border-upg-orange transition-all duration-300 hover:-translate-y-1 hover:shadow-xl relative" data-aos="fade-up" data-aos-delay="0">
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-upg-orange text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">Filial Activa</span>
+          </div>
+          <div class="h-44 bg-gradient-to-br from-upg-green-dark to-upg-green flex items-center justify-center overflow-hidden p-6">
+            <img src="assets/images/logos/UPGSantaAna-removebg.png" alt="UPG Filial Santa Ana" class="h-full w-auto object-contain drop-shadow-lg" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 bg-upg-orange rounded-full animate-pulse"></div>
+              <span class="text-xs font-semibold text-upg-orange uppercase tracking-wider">UPG Santa Ana</span>
+            </div>
+            <h3 class="font-bold text-upg-green text-lg mb-2">Filial Santa Ana</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Departamento de Misiones. Oferta académica orientada a las Ciencias de la Salud con énfasis en Enfermería.</p>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <svg class="w-3.5 h-3.5 text-upg-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Santa Ana, Misiones · Paraguay
+            </div>
+          </div>
+        </div>
+
+        <!-- UPG San Juan Nepomuceno -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:border-upg-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-44 overflow-hidden">
+            <img src="assets/images/sociales/sanjuan2.jpg" alt="UPG Filial San Juan Nepomuceno" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold text-upg-green uppercase tracking-wider">UPG San Juan Npmc.</span>
+            </div>
+            <h3 class="font-bold text-upg-green text-lg mb-2">Filial San Juan Nepomuceno</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Departamento de Caazapá. Formación en Derecho, Ciencias de la Educación y Ciencias de la Salud.</p>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <svg class="w-3.5 h-3.5 text-upg-green flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              San Juan Nepomuceno, Caazapá · Paraguay
+            </div>
+          </div>
+        </div>
+
+        <!-- Sede Central — Villarrica -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:border-upg-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-44 bg-gradient-to-br from-upg-green-dark to-upg-green flex items-center justify-center">
+            <div class="text-center text-white">
+              <div class="text-5xl mb-2">🏛️</div>
+              <div class="text-sm font-semibold opacity-80 bg-white/20 px-3 py-1 rounded-full">Sede Central</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold text-upg-green uppercase tracking-wider">Sede Principal</span>
+            </div>
+            <h3 class="font-bold text-upg-green text-lg mb-2">Villarrica — Sede Central</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Departamento del Guairá. Sede fundacional con oferta completa: Salud, Derecho, Ingeniería, Ciencias Económicas y más.</p>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <svg class="w-3.5 h-3.5 text-upg-green flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Villarrica, Guairá · Paraguay
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <p class="text-gray-400 text-sm">Y más de <strong class="text-upg-green">40 filiales</strong> distribuidas en todo el territorio nacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
        NOTICIAS
   ══════════════════════════════════════════════ -->
   <section id="noticias" class="py-20 bg-upg-cream">
@@ -589,7 +676,7 @@
         </article>
 
         <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="100">
-          <div class="h-48 bg-gradient-to-br from-rose-700 to-pink-500 flex items-center justify-center">
+          <div class="h-48 bg-gradient-to-br from-sky-700 to-sky-400 flex items-center justify-center">
             <div class="text-center text-white">
               <div class="text-4xl mb-2">🏥</div>
               <div class="text-sm font-medium opacity-75">Ciencias de la Salud</div>
@@ -597,7 +684,7 @@
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-3">
-              <span class="text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">Salud</span>
+              <span class="text-xs font-semibold text-sky-700 bg-sky-100 px-2 py-1 rounded-full">Salud</span>
               <span class="text-xs text-gray-400">15 Abril, 2026</span>
             </div>
             <h3 class="font-bold text-gray-800 text-base mb-2 group-hover:text-upg-green transition-colors line-clamp-2">Estudiantes de Enfermería realizan prácticas en el Hospital Regional de Villarrica</h3>
@@ -756,7 +843,7 @@
         <div>
           <h4 class="font-bold text-sm uppercase tracking-wider mb-5 text-upg-orange-light">Carreras</h4>
           <ul class="space-y-2.5">
-            <li><a href="pages/carreras.html#enfermeria" class="text-rose-300 hover:text-white text-sm transition-colors font-semibold">🏥 Enfermería ★</a></li>
+            <li><a href="pages/carreras.html#enfermeria" class="text-sky-300 hover:text-white text-sm transition-colors font-semibold">🏥 Enfermería ★</a></li>
             <li><a href="pages/carreras.html#derecho" class="text-gray-400 hover:text-white text-sm transition-colors">Derecho</a></li>
             <li><a href="pages/carreras.html#informatica" class="text-gray-400 hover:text-white text-sm transition-colors">Ing. Informática</a></li>
             <li><a href="pages/carreras.html#civil" class="text-gray-400 hover:text-white text-sm transition-colors">Ing. Civil</a></li>
