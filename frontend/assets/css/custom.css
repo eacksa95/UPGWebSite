@@ -3,12 +3,13 @@
 /* Smooth scrolling + scroll snap por sección */
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;   /* proximity = snap suave, no fuerza el salto de inmediato */
+  scroll-padding-top: 84px;        /* topbar(32) + navbar(52) — el hero queda visible incluyendo el topbar */
 }
 
 section {
   scroll-snap-align: start;
-  scroll-margin-top: 52px;
+  /* sin scroll-margin-top individual — se maneja con scroll-padding-top en html */
 }
 
 footer {
